@@ -288,7 +288,7 @@ pub const CLASSES: ClassExports = objc_classes! {
         });
     }
     CGRect {
-        origin: CGPoint { x: 0.0, y: 0.0 },
+        origin: CGPoint { x: 320.0, y: 480.0 },
         size: CGSize {
             width:  width  as CGFloat,
             height: height as CGFloat,
@@ -304,7 +304,7 @@ pub const CLASSES: ClassExports = objc_classes! {
     let bounds: CGRect = msg![env; this bounds];
     let scale = screen_scale(env);
     CGRect {
-        origin: CGPoint { x: 0.0, y: 0.0 },
+        origin: CGPoint { x: 320.0, y: 480.0 },
         size: CGSize {
             width:  bounds.size.width as CGFloat * scale,
             height: bounds.size.height as CGFloat * scale,
