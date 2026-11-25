@@ -1467,13 +1467,13 @@ fn handle_touches_up(env: &mut Environment, map: HashMap<FingerId, Coords>) {
             }
             continue;
         };
-        let location = CGPoint {
+        let locationInView = CGPoint {
             x: coords.0,
             y: coords.1,
         };
         let view = touch_ivars(env, touch, |v| v.view);
         touch_ivars(env, touch, |v| {
-            v.previous_location = v.location;
+            v.previouslocationinview = v.location;
             v.location = location;
             v.timestamp = timestamp;
             v.phase = UITouchPhaseEnded;
